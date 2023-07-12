@@ -1,0 +1,102 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.service__card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color:#F2F2F2 !important;
+
+    @include WidthHeight(387px, 166px);
+    padding: 10px 10px 10px 10px;
+
+    cursor: pointer;
+  
+    &__logo {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+      
+        img {
+            @include WidthHeight(104px, 75px);
+        }
+    }
+  
+    &__content {
+        display: flex;
+        flex-direction: row;
+        text-align: left !important;
+        &__text{
+            margin: 0px 10px 0px 10px;
+        }
+    }
+  
+    .heading {
+        font-weight: 700;
+        font-size: 13px;
+        color: $Maastricht_blue !important;
+    }
+  
+    .description {
+        font-weight: 400 !important;
+        font-size: 13px !important;
+        color: $Css_grey !important;
+    }
+  
+    @media only screen and (max-width: 600px) {
+        @include WidthHeight(100%, auto);
+        max-height: 400px;
+        padding: 12px;
+        flex-direction: row-reverse;
+        font-size: 16px;
+      
+        &__logo__container {
+            margin-left: auto;
+            margin-right: 12px;
+        }
+        &__content{
+            display: flex;
+
+            &__text {
+                width: 60% !important;
+            }
+        }
+        
+    }
+    .delete-icon {
+        color: $Amaranth;
+    }
+    hr.horizontal-line {
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 70%;  
+    margin: 0 auto;  
+      }
+    hr.small__line{
+        height: 35px;
+    }
+      .service__card__content__below {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    
+        &__first{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            &__price{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &__second{
+            display: flex;
+            color: $Amaranth;
+            font-size: 16px;
+            font-weight: 400;
+            gap: 5px;
+        }
+      }
+      
+}

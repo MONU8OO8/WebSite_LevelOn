@@ -1,0 +1,77 @@
+@import './variables.scss';
+@import './typography.scss';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  // color: $stonner;
+}
+
+html {
+  font-size: 16px; // 1 rem = 9px; 9px/16px = 56.25%
+  // font-size: 50%; // 1 rem = 8px; 8px/16px = 50%
+  // font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto !important;
+  box-sizing: border-box;
+  font-family: $Lato_Regular;
+  // background-image: url("https://themoodguide.com/wp-content/uploads/2022/04/purple-aesthetic-iphone-wallpaper.jpg");
+  // height: 100%; /* You must set a specified height */
+  // background-position: center; /* Center the image */
+  // background-repeat: no-repeat; /* Do not repeat the image */
+  // background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media all and (min-width: 1920px) {
+  // define your rem value
+}
+
+@media all and (min-width: 1600px) {
+  // define your rem value
+}
+
+@media all and (min-width: 1440px) {
+  // define your rem value
+}
+
+@media all and (min-width: 1299px) {
+  // define your rem value
+}
+
+@media all and (min-width: 1024px) {
+  // define your rem value
+}
+
+@media all and (max-width: 768px) {
+  // define your rem value
+}

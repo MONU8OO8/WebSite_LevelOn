@@ -1,0 +1,35 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.primary-btn{
+    @include WidthHeight(100%, 47px);
+    @include text($font_size_9 ,$white, 700, normal,  19px, normal);
+    text-transform: initial !important;
+    background-color: $Amaranth !important;
+    box-shadow: none!important;
+    border-radius: 8px !important;
+    &:hover{
+        background-color: $Amaranth !important;
+    }
+
+    &.Mui-disabled {
+        &.back{
+            background-color:  white !important;
+            color: white !important;
+            cursor: not-allowed;
+            border: none !important;
+        }
+      }
+    &.back {
+        @include text(16px, $Metallic_silver, 400, normal, 19px, normal);
+        background-color: transparent !important;
+        border: 1px solid $Metallic_silver;
+      }
+    &.next{
+        @include text(16px, $white, 400, normal, 19px, normal);
+        background-color: $Amaranth !important;
+      } 
+    &.finish{
+        width: 100% !important;
+    }  
+}

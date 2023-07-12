@@ -1,0 +1,68 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.service {
+    @include WidthHeight(100%, 100%);
+    @include flexCenter;
+
+    &__section {
+        @include flexCenter;
+        flex-direction: column;
+        width: 100%;
+        &__button{
+            // width: 100% !important;
+            display: flex !important;
+            // grid-template-columns: repeat(2, minmax(100px, 250px));
+            // justify-content: space-around;
+            justify-items: center !important;
+            align-items: center !important;
+            gap: 400px;
+            &__add{
+                @include WidthHeight(176px, 44px);
+                display: flex;
+                .addbutton{
+                    font-size: 16px !important;
+                    font-weight: 500 !important;
+                }
+            }
+        }
+        &__line{
+            border: none;
+    border-top: 1px solid #ccc;
+    width: 70%;  
+    margin: 20px 0 30px 0;
+        }
+
+        .service__content {
+            display: flex !important;
+            // grid-template-columns: repeat(2, minmax(100px, 250px));
+            // justify-content: space-around;
+            justify-items: center !important;
+            align-items: center !important;
+            gap: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .service {
+        @include WidthHeight(100%, 100%);
+        @include flexCenter;
+
+        &__section {
+            @include flexCenter;
+            flex-direction: column;
+            width: 90%;
+
+            .service__content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .MuiGrid-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

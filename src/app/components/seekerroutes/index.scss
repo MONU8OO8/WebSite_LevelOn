@@ -1,0 +1,33 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.student__profile {
+  @include flexCenter;
+  flex-direction: column !important;
+  &__container{
+    width: 100% !important;
+  }
+
+  &__button {
+    @include flexCenter;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0px 15px !important;
+
+    &__text {
+      @include WidthHeight(140px, 43px);
+      border-radius: 8px !important;
+    }
+    &__finish{
+      @include WidthHeight(400px, 43px);
+      border-radius: 8px !important;
+    }
+    
+  }
+
+  @media (max-width: 768px) {
+     .student__profile__container{
+      width: 90% !important;
+     }
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.toast {
+  @include toasttext($font_size_10, $Forest_green, 700, 287px, 56px, $light_green, flex, 16px, space-between, center);
+  border: 1px solid $green;
+  border-radius: $font_5;
+  margin-top: 10px;
+
+  .icon {
+    @include WidthHeight(20px, 20px);
+    margin-right: 8px;
+  }
+
+  .message {
+    flex-grow: 1;
+  }
+
+  .close {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+
+    @include toasttext($font_size_10, $Forest_green, 700, 80%, auto, $light_green, flex, 8px, center, center);
+    padding: 8px;
+    margin-top: 10px !important;
+
+    .message {
+      margin-bottom: 4px;
+      text-align: center;
+      margin-left: -5px;
+    }
+  }
+}
+

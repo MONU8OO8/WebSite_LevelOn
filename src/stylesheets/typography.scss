@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+@font-face {
+  font-family: $Lato_Light;
+  src: url($Font_Lite_File) format('opentype');
+}
+
+@font-face {
+  font-family: $Lato_Regular;
+  src: url($Font_Regular_File) format('opentype');
+}
+
+@font-face {
+  font-family: $Lato_Bold;
+  src: url($Font_Bold_File) format('opentype');
+}
+
+@font-face {
+  font-family: $Lato_Semibold;
+  src: url($Font_SemiBold_File) format('opentype');
+}

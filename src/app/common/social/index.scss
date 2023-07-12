@@ -1,0 +1,15 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+
+.social{
+    @include WidthHeight(100%, 47px);
+    @include text($font_size_9,$Raisin_black, 700, normal,  19px, normal);
+    text-transform: initial !important;
+    @include SetBorder($Metallic_silver);
+    margin-bottom: 24px !important;
+    // &:hover{
+   
+    // }
+    
+}

@@ -1,0 +1,8 @@
+export const SIGNUP = '/api/v1/user/signUpWithPhone'
+export const VERIFY_OTP = '/api/v1/user/verifyOtp'
+export const ADD_ADDRESS_API = '/api/v1/user/addAddress'
+export const PRODUCT_LIST_API = '/api/v1/product/productListing'
+export const ADD_TO_CART_API = '/api/v1/cart/addToCart'
+export const ADD_TO_CART_updated_API = '/api/v1/cart/addToCartUpdated'
+export const GET_CART_ITEM_API = '/api/v1/cart/getCartItems'
+export const ADD_REMOVE_CART_ITEM_API = '/api/v1/cart/addRemoveCartItem'

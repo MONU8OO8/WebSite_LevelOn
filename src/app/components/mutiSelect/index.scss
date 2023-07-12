@@ -1,0 +1,24 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+
+.MuiChip-root{
+    @include text($font_size_10 , $Raisin_black, 400, normal, 19px, normal);
+    box-sizing: border-box;
+    border: 1px solid $Amaranth !important;
+    border-radius: 8px !important;
+    background-color: $white !important;
+}
+.MuiOutlinedInput-root {
+    font-size: 0.9rem !important;
+    height: auto !important;
+    background-color: #F2F2F2 !important;
+}
+.dropdown-label{
+    margin-bottom: 10px !important; 
+    color: $Raisin_black !important;
+}
+.MuiChip-deleteIcon{
+    color: $Raisin_black !important;
+ 
+}

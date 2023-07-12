@@ -1,0 +1,62 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+@import '../../../stylesheets/base.scss';
+
+
+.Layout {
+    @include flexCenter;
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+
+
+    &__right {
+        @include flexCenter;
+        background-color: $Antiflash_white !important;
+        height: 100vh !important;
+        width:58% !important;
+
+
+
+        &__container {
+            width:80% !important;
+            &__background{
+                @include WidthHeight(75%, auto);
+                margin: 0 auto !important;
+                padding-top: 16px;
+                display: flex;
+
+            }
+        }
+
+    }
+
+    &__left {
+        display: block !important;
+        width: 42% !important;
+
+
+        &__container {
+            width: 100% !important;
+            text-align: center !important;
+            height: fit-content !important;
+
+     
+
+            &__logo {
+                width: 160px;
+                margin-bottom: 30px;
+                margin-top: 40px;
+            }
+
+        }
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+    .Layout {
+        &__right {
+            display: none !important;
+        }
+    }
+}

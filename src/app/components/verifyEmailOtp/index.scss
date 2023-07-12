@@ -1,0 +1,48 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.verifyotp{
+    @include WidthHeight(100%, 100%);
+    @include flexCenter;
+    &__section{
+        width: 40%;
+    }
+}
+
+.disable{
+    @include text(16px, $Metallic_silver, 400, normal, 19px, normal);
+    background-color:$Light_Crimson !important;
+}
+.enable{
+    @include text(16px, $white, 400, normal, 19px, normal);
+    background-color: $Amaranth !important
+}
+.otp-timer {
+    text-align: end !important;
+}
+
+.otp-timer{
+    @include text($font_size_9 ,$Raisin_black, 500, normal, 16px, normal);
+
+}
+.otp-expired{
+    @include text($font_size_9 ,$Amaranth, 500, normal, 16px, normal);
+    border: none !important;
+    background: none !important;
+  
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 600px) { 
+    .verifyotp{
+        @include WidthHeight(100%, 100%);
+        @include flexCenter;
+        &__section{
+            width: 90%;
+    
+        }
+    }
+
+}
+
+

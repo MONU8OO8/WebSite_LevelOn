@@ -1,0 +1,59 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.seeker__profile {
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__upload {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    &__label {
+      @include flexCenter;
+      @include WidthHeight(90px, 90px);
+      border-radius: 50% !important;
+      background-color: $Light_gray !important;
+      // border: 2px solid $Css_grey;
+      cursor: pointer;
+    }
+
+    &__input {
+      display: none;
+    }
+
+    &__icon {
+      @include flexCenter;
+      @include WidthHeight(47px, 47px);
+      border-radius: 50%;
+      background-color: $Css_grey;
+      border: 2px solid $Css_grey;
+      cursor: pointer;
+    }
+
+    .icon {
+      @include WidthHeight(20px, 20px);
+    }
+
+    &__text {
+      &__row1 {
+        @include text($font_size_10, $Amaranth, 700, normal, 23px, normal);
+        margin-left: 8px;
+      }
+      &__row2 {
+        @include text($font_size_8, $Css_grey, 400, normal, 24px, normal);
+        margin-left: 8px;
+      }
+    }
+  }
+  &__section{
+    width: 100%;
+  }
+  
+}
+

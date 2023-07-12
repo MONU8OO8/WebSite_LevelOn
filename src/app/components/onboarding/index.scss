@@ -1,0 +1,43 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.onboarding {
+    @include WidthHeight(100%, 100%);
+    @include flexCenter;
+
+    &__section {
+        @include flexCenter;
+        flex-direction: column;
+
+        .onboarding__card {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(100px, 250px));
+            justify-items: center;
+            gap: 44px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .onboarding {
+        @include WidthHeight(100%, 100%);
+        @include flexCenter;
+
+        &__section {
+            @include flexCenter;
+            flex-direction: column;
+            width: 90%;
+
+            .onboarding__card {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .MuiGrid-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

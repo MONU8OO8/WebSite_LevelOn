@@ -1,0 +1,70 @@
+// get color names from here https://chir.ag/projects/name-that-color/#6195ED
+
+// colors
+$white: #ffffff;
+$black: #000000;
+
+//primary colors
+$Amaranth: #E82F5B;
+$Raisin_black : #212227;
+$Lavender_blush: #FFEDF1;
+$Metallic_silver: #A8A9B0;
+$Antiflash_white: #F2F2F2;
+$Css_grey: #7B7C83;
+$Light_gray: #D2D3D6;
+$light_green: #EEFFED;
+$Light_blue:#EDF6FF;
+$Fire_Engine_Red:#C72121;
+$Light_Crimson:#EF6D8C;
+
+ 
+
+
+//supporting colors
+$Deep_carmine: #FF3333;
+$Maastricht_blue: #02203D;
+$Fresh_air: #B8DBFF;
+$American_bronze: #3D1502;
+$Apricot: #FFCEB8;
+$Forest_green: #073D02;
+$Menthol: #BDFFB8;
+$green: #3FEA32;
+$dark_green: #24C418;
+$light_black:#605F5F;
+
+
+// font family names
+$Lato_Light: 'Lato-Light';
+$Lato_Regular: 'Lato-Regular';
+$Lato_Bold: 'Lato-Bold';
+$Lato_Semibold: 'Lato-Semibold';
+
+// font sizes
+$font_5: 0.5rem;
+$font_size_8: 0.8rem;
+$font_size_9: 0.9rem;
+$font_size_10: 1rem;
+$font_size_11: 1.1rem;
+$font_size_12: 1.2rem;
+$font_size_13: 1.3rem;
+$font_size_14: 1.4rem;
+$font_size_15: 1.5rem;
+$font_size_16: 1.6rem;  
+$font_size_18: 1.8rem;
+$font_size_20: 2rem;
+$font_size_24: 2.4rem;
+$font_size_28: 2.8rem;
+$font_size_30: 3rem;
+$font_size_32: 3.2rem;
+$font_size_40: 4rem;
+$font_size_42: 4.2rem;
+$font_size_45: 4.5rem;
+$font_size_50: 5rem;
+$font_size_60: 6rem;
+$font_size_70: 7rem;
+
+// font family path
+$Font_Lite_File: '../assets/fonts/Lato-Light.ttf';
+$Font_Regular_File: '../assets/fonts/Lato-Regular.ttf';
+$Font_Bold_File: '../assets/fonts/Lato-Bold.ttf';
+$Font_SemiBold_File: '../assets/fonts/Lato-Black.ttf';

@@ -1,0 +1,34 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.forgotpass {
+    @include WidthHeight(100%, 100%);
+    @include flexCenter;
+
+    &__section {
+        width: 40%;
+
+    }
+}
+
+.disable{
+    @include text(16px, $Metallic_silver, 400, normal, 19px, normal);
+    background-color:$Light_Crimson !important;
+}
+.enable{
+    @include text(16px, $white, 400, normal, 19px, normal);
+    background-color: $Amaranth !important
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+    .forgotpass {
+        @include WidthHeight(100%, 100%);
+        @include flexCenter;
+
+        &__section {
+            width: 90%;
+
+        }
+    }
+
+}

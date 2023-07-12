@@ -1,0 +1,40 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.signup{
+    @include WidthHeight(100%, 100%);
+    @include flexCenter;
+    &__section{
+        width: 40%;
+        
+        .link{
+            @include text($font_size_10 ,$Amaranth, 700, normal,  19px, normal);
+            cursor: pointer !important;
+
+        }
+
+
+    }
+}
+.disable{
+    @include text(16px, $Metallic_silver, 400, normal, 19px, normal);
+    background-color:$Light_Crimson !important;
+}
+.enable{
+    @include text(16px, $white, 400, normal, 19px, normal);
+    background-color: $Amaranth !important
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) { 
+    .signup{
+        @include WidthHeight(100%, 100%);
+        @include flexCenter;
+        &__section{
+            width: 90%;
+    
+        }
+    }
+
+}
+
+

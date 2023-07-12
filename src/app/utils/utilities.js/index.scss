@@ -1,0 +1,18 @@
+
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.line{
+    border: none;
+    border-top: 1px solid $Light_gray;
+}
+
+.ortext{
+    @include text($font_size_9 ,$Raisin_black, 500, normal,  12px, normal);
+}
+
+.levelon-logo{
+    @include WidthHeight(130px , 47px) ;
+    box-shadow: 10px 10px 50px 0px rgba(255, 208, 208, 0.25);
+    margin-bottom: 12px !important ;
+}

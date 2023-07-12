@@ -1,0 +1,25 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.dialog__popup {
+  .MuiDialog-paper {
+    width: 700px; /* Adjust the width as per your requirements */
+    max-width: 90%;
+    padding: 30px;
+  }
+  
+  &__content{
+    width: 100% !important;
+    padding: 10px;
+    &__head{
+      @include text($font_size_13 ,$Raisin_black, 700, normal,  34px, normal);
+    }
+  }
+  &__buttons{
+    @include flexCenter;
+    width: 100%;
+    justify-content: space-around;
+    gap: 300px;
+  }
+}
+

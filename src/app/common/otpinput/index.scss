@@ -1,0 +1,16 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+
+.otpinput{
+    display: grid;
+    gap: 1rem !important;
+    // border: 1px solid $Amaranth !important;
+    border-radius: 8px !important;
+
+}
+
+.otplabel{
+    @include text($font_size_10 ,$Raisin_black, 500, normal,  19px, normal);
+    margin-bottom: 18px !important;
+}

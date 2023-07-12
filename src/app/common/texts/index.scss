@@ -1,0 +1,70 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.imgtitle{
+    @include text($font_size_16, $black, 700, normal,  normal, normal);
+    text-shadow: 10px 10px 50px 0px rgba(174, 187, 201, 0.25) !important;
+    margin-bottom:16px !important;                  
+}
+.img-description{
+    @include text($font_size_9 ,$light_black, normal, normal,  normal, normal);
+    margin-bottom:24px !important;               
+}
+.title{
+    @include text($font_size_16,$Raisin_black, 700, normal,  24px, normal);
+    margin-bottom: 16px !important;
+}   
+
+.description{
+    @include text($font_size_9 ,$Raisin_black, 500, normal,  16px, normal);  
+    margin-bottom:24px !important;
+}
+.desc{
+    @include text($font_size_15 ,#7B7C83, 400, normal,  19px, normal);
+    margin-bottom:24px !important;
+}
+
+.account{
+    @include text($font_size_9 ,$Raisin_black, 500, normal,  19px, normal);
+    text-align: center !important;
+}
+.link{
+    @include text($font_size_9 ,$Amaranth, 700, normal,  19px, normal);
+    cursor: pointer !important;
+    text-align: none !important;
+    text-decoration: none !important;
+
+}
+
+
+.forgotpwd{
+    text-align: end !important;
+    cursor: pointer !important;
+    text-align: none !important;
+}
+.conditions{
+    @include text($font_size_9 ,$Raisin_black, 500, normal,  19px, normal);
+}
+
+ .resistration-title{
+    @include text($font_size_20,$Raisin_black, 600, normal,  40px, normal);
+    margin-bottom: 14px !important;
+}
+
+.resistration-description{
+    @include text($font_size_15, $Css_grey, 400, normal,  28px, normal);
+    margin-bottom:40px !important;
+}
+
+.seeker-title{
+    @include text($font_size_12,$Maastricht_blue, 700, normal,  23px, normal);
+    margin-bottom: 14px !important;
+}
+
+.seeker-description{
+    @include text($font_size_10, $Css_grey, 400, normal,  24px, normal);
+    margin-bottom:24px !important;
+}
+
+
+

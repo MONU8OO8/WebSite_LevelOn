@@ -1,0 +1,17 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.seeker__skill {
+  width: 100% !important;
+
+  &__year{
+    @include flexCenter;
+    width: 100%;
+    justify-content: space-around;
+    gap: 20px;
+
+  }
+
+  
+}
+
