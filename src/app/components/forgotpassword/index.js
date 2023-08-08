@@ -3,27 +3,21 @@ import './index.scss'
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import TextInput from '../textinput'
-import { ForgotPassConstants } from '../../mock-data/constants'
+import { VerifyOtpConstants } from '../../mock-data/constants'
 import { TitleDescription } from '../../common/texts'
 import ButtonComponent from '../button'
 import { validateForm } from '../../utils/config'
 import { ErrorCheck } from '../../utils/services'
 
 
-
 const ForgotPassComponent = () => {
-    const [formData, setFormData] = useState({email: ''})
+    const [formData, setFormData] = useState({ email: '' })
     const [errors, setErrors] = useState({})
     const [buttonEnabled, setButtonEnabled] = useState(false)
-
 
     useEffect(() => {
         setButtonEnabled(formData.email !== '')
     }, [formData.email])
-
-
-
-
 
     const handleFormSubmit = () => {
         console.log(validateForm(formData))
@@ -33,8 +27,9 @@ const ForgotPassComponent = () => {
             setErrors(validationErrors)
         } else {
             setErrors({})
-            alert('success')
         }
+        alert('success')
+
     }
 
     const handleChange = (e) => {
@@ -57,7 +52,7 @@ const ForgotPassComponent = () => {
                 <Box className='forgotpass__section'>
                     <Box sx={{ mb: '24px' }} />
 
-                    {TitleDescription(ForgotPassConstants['title'])}
+                    {TitleDescription(VerifyOtpConstants['title'])}
                     <TextInput
                         label={'Email'}
                         name="email"
@@ -70,6 +65,8 @@ const ForgotPassComponent = () => {
                         eventHandler={handleChange}
                         autoFocus={true}
                         onKeyDown={handleKeyDown}
+                        autoComplete={'off'}
+
                     />
                     <Box sx={{ mb: '20px' }} />
                     <Box className={`setpass-btn__${!buttonEnabled ? 'disable' : 'enable'}`}>

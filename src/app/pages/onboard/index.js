@@ -10,7 +10,6 @@ const Login = () => {
                 <Onboarding />
             </Onboardingwrapper>
         </>
-
     )
 }
 

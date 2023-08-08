@@ -2,42 +2,42 @@
 @import '../../../stylesheets/mixins.scss';
 
 .home {
+  @include flexCenter;
+  width: 100%;
+  height: 100% !important;
+  text-align: center !important;
+  background-image: url('../../../assets/images/homePage-img.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+
+  &__top {
+    @include WidthHeight(100%, 10%);
     @include flexCenter;
-    width: 100%;
-    height: 100% !important;
-    text-align: center !important;
-    background-image: url('../../../assets/images/homePage-img.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;  
-  
-    &__top {
-      @include WidthHeight(100%, 10%);
-      @include flexCenter;
-      &__container {
-        @include WidthHeight(66%, 100%);
-        @include flexCenter;
-      }
-    }
-  
-  
-    &__bottom {
-      @include WidthHeight(100%, 80%);
-      @include flexCenter;
 
-      &__container {
-        width: 100%;
-        &__button{
-          text-align: center !important;
-          @include flexCenter;
-
-          display: grid !important;
-          grid-template-columns: repeat(2, minmax(100px, 120px));
-          gap: 2rem;
-        }
-      }
-  
+    &__container {
+      @include WidthHeight(66%, 100%);
+      @include flexCenter;
     }
-  
   }
-  
+
+  &__bottom {
+    @include WidthHeight(100%, 80%);
+    @include flexCenter;
+
+    &__container {
+      width: 100%;
+
+      &__button {
+        text-align: center !important;
+        @include flexCenter;
+
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(100px, 120px));
+        gap: 2rem;
+      }
+    }
+
+  }
+
+}

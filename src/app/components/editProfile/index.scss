@@ -1,0 +1,74 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+@import '../../../stylesheets/base.scss';
+
+.icon {
+    @include WidthHeight(30px, 30px);
+}
+
+.profile-card {
+    border-radius: 16px !important;
+    border: 1px solid $Light_gray;
+    background: $white;
+
+    &__items {
+        &__top {
+            height: 200px !important;
+            background: $Light_blue !important;
+        }
+
+        &__bottom {
+            height: auto;
+            display: flex !important;
+            justify-content: space-between !important;
+
+            &__btn {
+                text-align: end !important;
+
+
+                &__editbtn {
+                    @include text($font_size_10 , $Raisin_black, 400, normal, normal, normal);
+
+                    border-radius: 8px !important;
+                    background: #F2F2F2 !important;
+                    margin: 1rem !important;
+                    padding: 10px !important;
+                    text-transform: none !important;
+                }
+            }
+
+            &__img {
+                display: block !important;
+                &__label {
+                    @include flexCenter;
+                    @include WidthHeight(165px, 168px);
+                    border-radius: 50% !important;
+                    background-color: $Light_gray !important;
+                    cursor: pointer;
+                    margin-top: -40% !important;
+                    margin-left: 15% !important;
+
+                    &__input {
+                        display: none
+                    }
+
+                    &__icon {
+                        @include flexCenter;
+                        @include WidthHeight(97px, 97px);
+                        border-radius: 50%;
+                        background-color: $Css_grey;
+                        border: 2px solid $Css_grey;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+.children{
+    margin:2% !important;
+}
+
+

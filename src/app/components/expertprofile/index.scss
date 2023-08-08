@@ -41,18 +41,21 @@
     }
 
     .expert__profile__text {
+
       // margin-top: 16px;
       &__row1 {
         @include text($font_size_10, $Amaranth, 700, normal, 23px, normal);
         margin-left: 8px;
       }
+
       &__row2 {
         @include text($font_size_8, $Css_grey, 400, normal, 24px, normal);
         margin-left: 8px;
       }
     }
   }
-  &__section{
+
+  &__section {
     width: 100%;
   }
 
@@ -60,6 +63,5 @@
     margin-top: 16px;
   }
 
-  
-}
 
+}

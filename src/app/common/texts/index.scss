@@ -13,14 +13,18 @@
 .title{
     @include text($font_size_16,$Raisin_black, 700, normal,  24px, normal);
     margin-bottom: 16px !important;
-}   
+} 
+.onboardtitle{
+    @include text(23px,$Raisin_black, 600, normal,  27px, normal);
+    margin-bottom: 16px !important;
+}  
 
 .description{
     @include text($font_size_9 ,$Raisin_black, 500, normal,  16px, normal);  
     margin-bottom:24px !important;
 }
-.desc{
-    @include text($font_size_15 ,#7B7C83, 400, normal,  19px, normal);
+.onboarddesc{
+    @include text(16px ,$Css_grey, 400, normal,  19px, normal);
     margin-bottom:24px !important;
 }
 

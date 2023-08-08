@@ -3,7 +3,7 @@ import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'
 import { Link } from 'react-router-dom'
 
-export const ImgTitle = (title,description) => {
+export const ImgTitle = (title, description) => {
     return (
         <>
             <Typography className='imgtitle'> {title} </Typography>
@@ -25,14 +25,14 @@ export const TitleDescription = (title, description) => {
 export const OnboardingTitelDes = (title, desc) => {
     return (
         <>
-            <Typography className='title'>{title}</Typography>
-            <Typography className='desc'>{desc}</Typography>
+            <Typography className='onboardtitle'>{title}</Typography>
+            <Typography className='onboarddesc'>{desc}</Typography>
         </>
     )
 }
 
 export const ForgotPass = (title) => {
-    return (   
+    return (
         <>
             <Box sx={{ mb: '16px' }} />
             <Typography className='forgotpwd'>
@@ -48,13 +48,25 @@ export const HaveAccount = (description, link) => {
     return (
         <>
             <Typography className='account'>
-                
+
                 {description}<span className='link'>
                     <Link to='/login' className='link'>{link}</Link></span>
             </Typography>
         </>
     )
 }
+export const signupAccount = (description, link) => {
+    return (
+        <>
+            <Typography className='account'>
+
+                {description}<span className='link'>
+                    <Link to='/signup' className='link'>{link}</Link></span>
+            </Typography>
+        </>
+    )
+}
+
 export const TermsConditions = (description, link) => {
     return (
         <>

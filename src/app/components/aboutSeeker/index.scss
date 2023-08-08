@@ -1,0 +1,23 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+@import '../../../stylesheets/base.scss';
+
+
+.aboutSeeker {
+    background: $white;
+
+    &__container {
+        @include flexCenter;
+        width: 100%;
+        justify-content: space-around;
+        gap: 20px;
+        margin-bottom: 2% !important;
+
+    }
+}
+
+.text {
+    @include text($font_size_10 , $Raisin_black, 500, normal, normal, normal);
+    padding: 0 0 15px 0 !important;
+
+}

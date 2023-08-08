@@ -1,0 +1,23 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+@import '../../../stylesheets/base.scss';
+ 
+
+.skill-card{
+    border-radius: 16px !important;
+    border: 1px solid $Light_gray;
+    background: $white;
+
+    &__items{
+        justify-content: space-between;
+        display: flex !important;
+        text-align: left !important;
+        padding: 20px !important;
+
+        &__header{
+            @include text($font_size_11 , $Raisin_black, 400, normal, normal, normal);
+
+        }
+
+    }
+}

@@ -36,7 +36,7 @@ const ExpertBackground = () => {
             <MultiSelect
                 label={'Which disciplines do you have experience in? *'}
                 name={'expertise'}
-                type={'text'}
+                type={'text'}    
                 options={Expertise}
                 renderInput={(params) =>
                     <TextField

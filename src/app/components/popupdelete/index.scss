@@ -1,0 +1,44 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.dialog__deletepopup {
+  .MuiDialog-paper {
+    width: 700px;
+    /* Adjust the width as per your requirements */
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 16px;
+  }
+
+  &__head {
+    width: 100% !important;
+    padding: 10px;
+
+    &__title {
+      @include text($font_size_13 , $Raisin_black, 600, normal, 22px, normal);
+    }
+  }
+
+  &__content {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__head {
+      @include text($font_size_13 , $Css_grey, 400, normal, 22px, normal);
+    }
+
+    &__des {
+      @include text($font_size_13 , $Raisin_black, 500, normal, 22px, normal);
+    }
+  }
+
+  &__buttons {
+    @include flexCenter;
+    width: 100%;
+    justify-content: space-around;
+    gap: 300px;
+  }
+}

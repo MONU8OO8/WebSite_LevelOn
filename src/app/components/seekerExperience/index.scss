@@ -1,0 +1,31 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.seeker-exp {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 20px 20px 20px !important;
+
+    &__container {
+        display: flex !important;
+
+        &__logo {
+            width: 60px !important;
+            height: 40px !important;
+            margin-right: 1rem !important;
+
+        }
+
+        &__details {
+            &__role {
+                @include text($font_size_10 , $Raisin_black, 400, normal, normal, normal);
+            }
+
+            &__compony {
+                @include text($font_size_8 , $Css_grey, 400, normal, normal, normal);
+                padding: 10px 0 0 0 !important;
+            }
+        }
+    }
+
+}

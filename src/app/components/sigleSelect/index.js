@@ -3,12 +3,8 @@ import './index.scss'
 import PropTypes from 'prop-types'
 import { Autocomplete, InputLabel } from '@mui/material'
 
-
-
 const SingleSelect = (props) => {
     const { label, name, type, placeholder, options, renderInput, eventHandler } = props
-
-
 
     return (
         <>

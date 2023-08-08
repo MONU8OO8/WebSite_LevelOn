@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Snackbar, IconButton, Typography,Avatar  } from '@mui/material'
+import { Snackbar, IconButton, Typography, Avatar } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 import './index.scss'
 import { ICONS } from '../../constants/icons'

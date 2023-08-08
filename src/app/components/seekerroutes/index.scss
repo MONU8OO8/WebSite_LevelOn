@@ -4,7 +4,8 @@
 .student__profile {
   @include flexCenter;
   flex-direction: column !important;
-  &__container{
+
+  &__container {
     width: 100% !important;
   }
 
@@ -18,16 +19,17 @@
       @include WidthHeight(140px, 43px);
       border-radius: 8px !important;
     }
-    &__finish{
+
+    &__finish {
       @include WidthHeight(400px, 43px);
       border-radius: 8px !important;
     }
-    
+
   }
 
   @media (max-width: 768px) {
-     .student__profile__container{
+    .student__profile__container {
       width: 90% !important;
-     }
+    }
   }
 }

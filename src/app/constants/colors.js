@@ -4,7 +4,7 @@ export const COLORS = {
     successText: '#073D02',
     seekercardcolor:  '#EDF6FF',
     seekercardborder: '#B8DBFF',
-    mentorcardcolor:  '#FDEFF2',
-    mentorcardborder: '#FFC2D6',
+    mentorcardcolor:  '#FFF3ED',
+    mentorcardborder: '#FFCEB8',
     Amaranth: '#E82F5B'
 }

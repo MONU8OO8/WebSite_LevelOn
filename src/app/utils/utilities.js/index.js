@@ -2,8 +2,6 @@ import Grid from '@mui/material/Grid'
 import './index.scss'
 import { ICONS } from '../../constants/icons'
 
-
-
 export const OrSeprator = () => {
 
     return (
@@ -32,7 +30,7 @@ export const LevelonLogo = () => {
     )
 }
 
-// export const hasNumber = /\d/  
+// export const hasNumber = /\d/
 // export const hasUpperCase = /[A-Z]/
 // export const hasLoweCase = /[a-z]/
 // export const hasSpecialChar = /^[a-zA-Z0-9]*$/

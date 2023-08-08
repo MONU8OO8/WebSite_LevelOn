@@ -15,7 +15,7 @@ const SkeekerStory = () => {
         { label: 'Let`s Connect' }
 
     ]
-    
+
     return (
         <Box className="seeker__skill">
             <Box sx={{ mb: '40px' }} />

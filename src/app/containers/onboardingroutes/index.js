@@ -10,7 +10,7 @@ const RenderActiveComponent = () => {
         return <OnboardingComponent setActiveComponent={setActiveComponent} />
     } else if (activeComponent === 'newComponent') {
         return <SeekerRoutes />
-    } else if (activeComponent === 'anotherComponent'){
+    } else if (activeComponent === 'anotherComponent') {
         return <ExpertRoutes />
     }
 

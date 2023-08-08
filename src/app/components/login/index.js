@@ -11,24 +11,19 @@ import { LoginConstants } from '../../mock-data/constants'
 import { validateForm } from '../../utils/config'
 import { ErrorCheck } from '../../utils/services'
 import Toast from '../../common/toast'
-import { ForgotPass, HaveAccount, TitleDescription } from '../../common/texts'
-
+import { ForgotPass, TitleDescription, signupAccount } from '../../common/texts'
+   
 const LoginComponent = () => {
-
     const [formData, setFormData] = useState({
         email: '',
         password: '',
     })
-    const [errors, setErrors] = useState({}) 
+    const [errors, setErrors] = useState({})
     const [buttonEnabled, setButtonEnabled] = useState(false)
-
 
     useEffect(() => {
         setButtonEnabled(formData.email !== '' && formData.password !== '')
-    }, [formData.email])
-
-  
-
+    }, [formData.email][formData.password])
 
     const handleFormSubmit = () => {
         console.log(validateForm(formData))
@@ -40,7 +35,7 @@ const LoginComponent = () => {
             // ...
         } else {
             setErrors({})
-            alert('success')
+            setFormData({ email: '', password: '' })
         }
     }
 
@@ -49,7 +44,7 @@ const LoginComponent = () => {
         let name = e.target.name
         setFormData({
             ...formData,
-            [name]: value
+            [name]: value,
         })
     }
 
@@ -61,9 +56,17 @@ const LoginComponent = () => {
 
     return (
         <>
-            <Grid className="login" display="flex" justifyContent="center" alignItems="center">
+            <Grid
+                className="login"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+            >
                 <Box className="login__section">
-                    {TitleDescription(LoginConstants['title'], LoginConstants['description'])}
+                    {TitleDescription(
+                        LoginConstants['title'],
+                        LoginConstants['description'],
+                    )}
                     <SocialLogin />
                     {OrSeprator()}
                     <TextInput
@@ -78,6 +81,7 @@ const LoginComponent = () => {
                         eventHandler={handleChange}
                         autoFocus={true}
                         onKeyDown={handleKeyDown}
+                        autoComplete={'off'}
                     />
                     <Box sx={{ mb: '20px' }} />
                     <TextInput
@@ -92,7 +96,8 @@ const LoginComponent = () => {
                         eventHandler={handleChange}
                         onKeyDown={handleKeyDown}
                     />
-                    {LoginConstants['isForgotPassword'] && ForgotPass('Forgot password?')}
+                    {LoginConstants['isForgotPassword'] &&
+                        ForgotPass('Forgot password?')}
                     <Box className={`setpass-btn__${!buttonEnabled ? 'disable' : 'enable'}`}>
                         <ButtonComponent
                             label={'Continue'}
@@ -102,16 +107,17 @@ const LoginComponent = () => {
                             className={!buttonEnabled ? 'disable' : 'enable'}
                         />
                     </Box>
-
                     <Box sx={{ mb: '24px' }} />
-                    {HaveAccount(LoginConstants['accountTitle'], LoginConstants['accountLink'])}
+                    {signupAccount(
+                        LoginConstants['accountTitle'],
+                        LoginConstants['accountLink'],
+                    )}
                 </Box>
             </Grid>
-            <Toast/>
+            <Toast />
         </>
     )
 }
-
 LoginComponent.propTypes = {
     handleShowToast: PropTypes.func.isRequired,
 }

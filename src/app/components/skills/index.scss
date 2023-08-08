@@ -1,0 +1,24 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+@import '../../../stylesheets/base.scss';
+
+
+.seeker-skills {
+    // justify-content: space-around;
+    display: flex !important;
+    text-align: left !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    gap: 1rem !important;
+
+    &__items {
+
+        &__skill {
+            @include text($font_size_9 , $Raisin_black, 500, normal, normal, normal);
+
+            border-radius: 8px !important;
+            padding: 10px !important;
+
+        }
+    }
+}

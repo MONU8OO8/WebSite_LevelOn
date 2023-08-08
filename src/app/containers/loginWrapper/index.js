@@ -9,7 +9,7 @@ import { LoginLeftConstants } from '../../mock-data/constants'
 import { ImgTitle } from '../../common/texts'
 import { LevelonLogo } from '../../utils/utilities.js/index.js'
 
-const LoginWarpper = ({children}) => {
+const LoginWarpper = ({ children }) => {
 
     return (
         <>
@@ -17,9 +17,9 @@ const LoginWarpper = ({children}) => {
                 <Grid className="Layout__right" item xs={GetCurrentResolution() === 'mobile' ? 0 : 4.5}>
                     <Box className="Layout__right__container">
                         <LevelonLogo />
-                        {ImgTitle(LoginLeftConstants['title'] , LoginLeftConstants['description'])}
-                        <img src={CarasolInImages['LevelUp']} alt="image" className="Layout__right__container__background"/>
-                    </Box>  
+                        {ImgTitle(LoginLeftConstants['title'], LoginLeftConstants['description'])}
+                        <img src={CarasolInImages['LevelUp']} alt="image" className="Layout__right__container__background" />
+                    </Box>
                 </Grid>
                 <Grid className="Layout__left" container item xs={GetCurrentResolution() === 'mobile' ? 12 : 7.5}>
                     {GetCurrentResolution() === 'mobile' && (
@@ -28,7 +28,7 @@ const LoginWarpper = ({children}) => {
                         </Box>
                     )}
                     {children}
-                    <Box sx={{mb: {xs:'40px',sm: '0px'}}}/>   
+                    <Box sx={{ mb: { xs: '40px', sm: '0px' } }} />
                 </Grid>
             </Grid>
         </>

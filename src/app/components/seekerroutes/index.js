@@ -24,15 +24,15 @@ const SeekerRoutes = () => {
 
     const renderStepContent = () => {
         switch (activeStep) {
-        case 0:
-            return <SeekerProfile />
-        case 1:
-            return <SeekerSkill />
-        case 2:
-            return <SkeekerStory />
-        default:
-            return <SkeekerFinish />
-        }
+            case 0:   
+                return <SeekerProfile />
+            case 1:
+                return <SeekerSkill />
+            case 2:
+                return <SkeekerStory />
+            default:
+                return <SkeekerFinish />
+        }  
     }
 
     return (

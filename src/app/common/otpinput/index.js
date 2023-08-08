@@ -1,16 +1,11 @@
 import React from 'react'
 import './index.scss'
 import PropTypes from 'prop-types'
-import {InputLabel } from '@mui/material'
+import { InputLabel } from '@mui/material'
 import { MuiOtpInput } from 'mui-one-time-password-input'
 
-
-
 const OtpInput = (props) => {
-    const { label, value, length, name, type,error, errorText, eventHandler,autoFocus } = props
-
-
-
+    const { label, value, length, name, type, error, errorText, eventHandler, autoFocus } = props
 
     return (
         <>

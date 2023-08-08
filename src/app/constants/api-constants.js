@@ -1,8 +1,19 @@
-export const SIGNUP = '/api/v1/user/signUpWithPhone'
-export const VERIFY_OTP = '/api/v1/user/verifyOtp'
-export const ADD_ADDRESS_API = '/api/v1/user/addAddress'
-export const PRODUCT_LIST_API = '/api/v1/product/productListing'
-export const ADD_TO_CART_API = '/api/v1/cart/addToCart'
-export const ADD_TO_CART_updated_API = '/api/v1/cart/addToCartUpdated'
-export const GET_CART_ITEM_API = '/api/v1/cart/getCartItems'
-export const ADD_REMOVE_CART_ITEM_API = '/api/v1/cart/addRemoveCartItem'
+
+const BASE_URL = 'http://34.237.150.37:3003/api/auth'
+
+export const API_CONSTANTS = {
+    SIGNUP: `${BASE_URL}/sign-up`,
+    SEND_OTP: `${BASE_URL}/generate-otp`,
+    SET_PASSWORD: `${BASE_URL}/set-password`,
+    LOGIN: `${BASE_URL}/set-password`,
+    LOGOUT: `${BASE_URL}/logout`,
+}
+
+export const API_METHODS = {
+    GET: "GET",
+    POST: "POST",
+    DELETE: "DELETE",
+    UPDATE: "UPDATE",
+    PUT: "PUT",
+  };       
+  

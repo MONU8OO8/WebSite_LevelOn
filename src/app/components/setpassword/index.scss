@@ -1,50 +1,52 @@
 @import '../../../stylesheets/variables.scss';
 @import '../../../stylesheets/mixins.scss';
 
-.setpass{
+.setpass {
     @include WidthHeight(100%, 100%);
     @include flexCenter;
-    &__section{
+
+    &__section {
         width: 40%;
-        
     }
 }
-.progress-bar{
+
+.progress-bar {
     display: grid !important;
     grid-template-columns: repeat(5, minmax(50px, 1fr));
     gap: 1rem !important;
 
-    &__items{
+    &__items {
         height: 3px !important;
     }
-    &__items-text{
+
+    &__items-text {
         justify-content: left;
         color: $Metallic_silver !important;
-        background-color:white !important;
+        background-color: white !important;
     }
 }
 
-    .disable{
-        @include text(16px, $Metallic_silver, 400, normal, 19px, normal);
-        background-color:#EF6D8C !important;
-        // background-color: transparent !important;
-    }
-    .enable{
-        @include text(16px, $white, 400, normal, 19px, normal);
-        background-color: $Amaranth !important
-    }
+.disable {
+    @include text(16px, $Metallic_silver, 400, normal, 19px, normal);
+    background-color: #EF6D8C !important;
+    // background-color: transparent !important;
+}
+
+.enable {
+    @include text(16px, $white, 400, normal, 19px, normal);
+    background-color: $Amaranth !important
+}
 
 
-@media only screen and (min-width: 0px) and (max-width: 600px) { 
-    .setpass{
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+    .setpass {
         @include WidthHeight(100%, 100%);
         @include flexCenter;
-        &__section{
+
+        &__section {
             width: 90%;
-    
+
         }
     }
 
 }
-
-

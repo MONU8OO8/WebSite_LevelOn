@@ -12,10 +12,10 @@ import Toast from '../../common/toast'
 import { HaveAccount, TermsConditions, TitleDescription } from '../../common/texts'
 import { SignupConstants } from '../../mock-data/constants'
 import SocialSignup from '../../common/social/socialsignup'
-import { useEffect } from 'react'
-
+import { useEffect } from 'react'    
+  
 const SignupComponent = () => {
-
+  
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -23,23 +23,20 @@ const SignupComponent = () => {
     const [errors, setErrors] = useState({})
     const [buttonEnabled, setButtonEnabled] = useState(false)
 
-
     useEffect(() => {
         setButtonEnabled(formData.email !== '' && formData.password !== '')
     }, [formData.email])
 
-
-
     const handleFormSubmit = () => {
-        console.log(validateForm(formData))
         const validationErrors = validateForm(formData)
 
         if (Object.keys(validationErrors).length !== 0) {
             setErrors(validationErrors)
         } else {
             setErrors({})
-            alert('success')
-        }
+        }   
+        alert('success')
+
     }
 
     const handleChange = (e) => {
@@ -76,6 +73,8 @@ const SignupComponent = () => {
                         eventHandler={handleChange}
                         autoFocus={true}
                         onKeyDown={handleKeyDown}
+                        autoComplete='off'
+
                     />
                     <Box sx={{ mb: '20px' }} />
                     <TextInput
@@ -92,7 +91,7 @@ const SignupComponent = () => {
                     />
                     <Box sx={{ mb: '20px' }} />
                     {TermsConditions(SignupConstants['conditiontitle'], SignupConstants['conditionlink'])}
-                        
+
                     <Box sx={{ mb: '20px' }} />
                     <Box className={`setpass-btn__${!buttonEnabled ? 'disable' : 'enable'}`}>
                         <ButtonComponent

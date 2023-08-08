@@ -10,13 +10,12 @@ import { validateForm } from '../../utils/config'
 import { ErrorCheck } from '../../utils/services'
 import { Typography } from '@mui/material'
 
-
 const EmailOtpComponent = () => {
 
     const [otp, setOtp] = useState('')
     const [buttonEnabled, setButtonEnabled] = useState(false)
     const [error, setError] = useState({})
-    const [timer, setTimer] = useState(30)
+    const [timer, setTimer] = useState(15)
 
     useEffect(() => {
         const countdown = setInterval(() => {
@@ -32,8 +31,6 @@ const EmailOtpComponent = () => {
             clearInterval(countdown)
         }
     }, [timer])
-
-
 
     useEffect(() => {
         setButtonEnabled(otp !== '')
@@ -51,11 +48,10 @@ const EmailOtpComponent = () => {
         } else {
             setError({})
             setOtp('')
-            alert('success')
         }
+        alert('success')
+
         setButtonEnabled(otp !== '')
-
-
     }
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
@@ -69,7 +65,6 @@ const EmailOtpComponent = () => {
         // Add your logic here to resend the OTP
         // This can be an API call or any other method to send the OTP again
     }
-
 
     return (
         <>
@@ -124,8 +119,6 @@ const EmailOtpComponent = () => {
 
                     <Box sx={{ mb: '24px' }} />
                     {HaveAccount(SignupConstants['accountTitle'], SignupConstants['accountLink'])}
-
-
                     <Box sx={{ mb: '24px' }} />
                 </Box>
             </Grid>

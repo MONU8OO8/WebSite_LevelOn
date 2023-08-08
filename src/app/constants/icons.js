@@ -9,7 +9,6 @@ import Upload from '../../assets/images/icons/Upload.png'
 import Finish from '../../assets/images/icons/Finish.png'
 import LevelUp from '../../assets/images/levelup.png'
 
-
 export const ICONS = {
     'COMPANYLOGO': COMPANYLOGO,
     'GOOGLEICON': GOOGLE,
@@ -21,11 +20,11 @@ export const ICONS = {
 }
 
 export const CarasolInImages = {
-    'CarasolImgOne' : SignInImgone,
-    'CarasolImgTwo':SignInImgtwo,
+    'CarasolImgOne': SignInImgone,
+    'CarasolImgTwo': SignInImgtwo,
     'LevelUp': LevelUp
 }
 // export const CardImages = {
 //     'SeekerCardImg' :SeekerCardImg,
-//     'ExpertCardImg' :ExpertCardImg 
+//     'ExpertCardImg' :ExpertCardImg
 // }

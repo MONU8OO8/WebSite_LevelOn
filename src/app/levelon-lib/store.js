@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-import {todoReducer} from './reducers/reducers'
+import { todoReducer } from './reducers/reducers'
 
 
 // Create store

@@ -1,3 +1,4 @@
+// TextInput.js
 import React, { useState, memo, useEffect, useRef } from 'react'
 import './index.scss'
 import PropTypes from 'prop-types'
@@ -18,9 +19,11 @@ const TextInput = memo((props) => {
         errorText,
         eventHandler,
         onKeyDown,
-        autoFocus, // Added autoFocus prop
-        multiline,  
+        autoFocus,
+        multiline,
         rows,
+        autoComplete,
+        value,
     } = props
     const [showPassword, setShowPassword] = useState(false)
     const inputRef = useRef(null)
@@ -65,8 +68,10 @@ const TextInput = memo((props) => {
                 }}
                 onChange={eventHandler}
                 onKeyDown={onKeyDown}
-                inputRef={inputRef} // Pass the ref to the input element
-                autoFocus={autoFocus} // Pass the autoFocus prop to the TextField
+                inputRef={inputRef}
+                autoFocus={autoFocus}
+                autoComplete={autoComplete}
+                value={value}
             />
         </>
     )
@@ -83,9 +88,11 @@ TextInput.propTypes = {
     errorText: PropTypes.string.isRequired,
     eventHandler: PropTypes.func.isRequired,
     onKeyDown: PropTypes.func.isRequired,
-    autoFocus: PropTypes.bool, // Add autoFocus prop type
-    multiline: PropTypes.bool, // Add multiline prop type
-    rows: PropTypes.number,    // Add rows prop type
+    autoFocus: PropTypes.bool,
+    multiline: PropTypes.bool,
+    rows: PropTypes.number,
+    autoComplete: PropTypes.string,
+    value: PropTypes.string
 }
 
 export default TextInput

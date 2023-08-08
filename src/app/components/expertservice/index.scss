@@ -9,7 +9,8 @@
         @include flexCenter;
         flex-direction: column;
         width: 100%;
-        &__button{
+
+        &__button {
             // width: 100% !important;
             display: flex !important;
             // grid-template-columns: repeat(2, minmax(100px, 250px));
@@ -17,30 +18,41 @@
             justify-items: center !important;
             align-items: center !important;
             gap: 400px;
-            &__add{
+
+            &__add {
                 @include WidthHeight(176px, 44px);
                 display: flex;
-                .addbutton{
+
+                .addbutton {
                     font-size: 16px !important;
                     font-weight: 500 !important;
                 }
             }
         }
-        &__line{
+
+        &__line {
             border: none;
-    border-top: 1px solid #ccc;
-    width: 70%;  
-    margin: 20px 0 30px 0;
+            border-top: 1px solid #ccc;
+            width: 70%;
+            margin: 20px 0 30px 0;
         }
 
         .service__content {
             display: flex !important;
-            // grid-template-columns: repeat(2, minmax(100px, 250px));
-            // justify-content: space-around;
-            justify-items: center !important;
-            align-items: center !important;
-            gap: 10px;
+            flex-wrap: wrap; // Allow cards to wrap to the next line
+            justify-content: center; // Align cards to the start of the container
+            gap: 10px; // Gap between cards
+
+            .MuiGrid-item {
+                flex-basis: calc(50% - 5px); // Two cards per row (minus gap)
+                margin-bottom: 10px; // Space between rows
+
+                @media only screen and (max-width: 600px) {
+                    flex-basis: 100%; // Single card per row on smaller screens
+                }
+            }
         }
+
     }
 }
 

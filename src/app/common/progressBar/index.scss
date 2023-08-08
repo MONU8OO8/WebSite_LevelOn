@@ -1,0 +1,45 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+@import '../../../stylesheets/base.scss';
+ 
+.progressbar-card{
+    border-radius: 16px !important;
+    border: 1px solid $Light_gray;
+    background: $white;
+    &__layout{
+        padding: 20px !important;
+
+        &__header{
+            @include text($font_size_12 ,$Raisin_black, 400, normal,  normal, normal);
+        }
+
+        &__items{
+            &__progressmeter{
+                padding: 20px 0 !important;
+                color:$Amaranth !important;
+
+                &__progress{
+                    border-radius: 8px;
+                    border: 1px solid $Amaranth;
+                    height: 27px !important;
+                    background-color:$white !important;
+
+                }
+                // &__progress.completed{
+                //     background-color: green !important ;
+                // }
+            }
+
+            &__lebel{
+
+                &__percentage{
+                @include text($font_size_10 ,$Amaranth, 500, normal,  normal, normal);
+                }
+             }
+        }
+    }
+}
+
+.css-5xe99f-MuiLinearProgress-bar1{
+    background-color: $Amaranth !important;
+}

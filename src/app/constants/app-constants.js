@@ -6,4 +6,6 @@ export const RouteConstant = {
     ONBOARDING:'/onboarding',
     fORGOTPASSWORD :'/forgotpassword',
     SIGNUP : '/signup',
+    NAVIGATION:'/navbar',
+    SEEKERPROFILE:'/seekerprofile'
 }

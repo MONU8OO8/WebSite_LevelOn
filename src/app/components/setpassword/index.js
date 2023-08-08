@@ -12,10 +12,7 @@ import { ErrorCheck } from '../../utils/services'
 
 const SetPassword = () => {
     const [buttonEnabled, setButtonEnabled] = useState(false)
-
-
     const [formData, setFormData] = useState({
-
         password: '',
         confirmPassword: ''
     })
@@ -24,9 +21,6 @@ const SetPassword = () => {
     useEffect(() => {
         setButtonEnabled(formData.password !== '' && formData.confirmPassword !== '')
     }, [formData.password, formData.confirmPassword])
-
-
-
 
     const handleFormSubmit = () => {
         console.log(validateForm(formData))
@@ -39,10 +33,11 @@ const SetPassword = () => {
         }
         else {
             setErrors({})
-            setFormData({ password: '' , confirmPassword: '' })
-            alert('success')
+            setFormData({ password: '', confirmPassword: '' })
         }
         setButtonEnabled(formData.password !== '' && formData.confirmPassword !== '')
+        alert('success')
+
     }
 
     const handleChange = (e) => {
@@ -60,7 +55,6 @@ const SetPassword = () => {
             handleFormSubmit()
         }
     }
-
 
     return (
         <>

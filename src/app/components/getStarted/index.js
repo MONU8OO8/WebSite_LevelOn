@@ -17,16 +17,16 @@ const GetStarted = () => {
 
     const [formData, setFormData] = useState({
         password: '',
-        
+
     })
     const [errors, setErrors] = useState({})
     const [buttonEnabled, setButtonEnabled] = useState(false)
 
 
     useEffect(() => {
-        setButtonEnabled(formData.password !== '' )
+        setButtonEnabled(formData.password !== '')
     }, [formData.password])
-    
+
     const handleFormSubmit = () => {
         console.log(validateForm(formData))
         const validationErrors = validateForm(formData)
@@ -35,8 +35,9 @@ const GetStarted = () => {
             setErrors(validationErrors)
         } else {
             setErrors({})
-            alert('success')
         }
+        alert('success')
+
     }
 
     const handleChange = (e) => {
@@ -75,10 +76,10 @@ const GetStarted = () => {
                     <PasswordStrengthBar
                         password={formData.password}
                     />
-                    
+
                     <Box sx={{ mb: '20px' }} />
                     {TermsConditions(SignupConstants['conditiontitle'], SignupConstants['conditionlink'])}
-                        
+
                     <Box sx={{ mb: '20px' }} />
                     <Box className={`setpass-btn__${!buttonEnabled ? 'disable' : 'enable'}`}>
                         <ButtonComponent

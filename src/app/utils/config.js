@@ -21,13 +21,26 @@ export function GetCurrentResolution() {
     }
 }
 
+export const validateEmail = (formData) => {
+    const errors = {}
+
+    if (!formData.email) {
+        errors.email = 'Email is required'
+    } else if (!EmailValidation(formData.email)) {
+        errors.email = 'Invalid Email Id'
+    }
+
+    return errors
+
+}
+
 export const validateForm = (formData) => {
     const errors = {}
 
     if (!formData.email) {
         errors.email = 'Email is required'
     } else if (!EmailValidation(formData.email)) {
-        errors.email = 'Invalid email format'
+        errors.email = 'Invalid Email Id'
     }
 
     if (!formData.password) {
@@ -38,13 +51,13 @@ export const validateForm = (formData) => {
 
     if (!formData.confirmPassword) {
         errors.confirmPassword = 'Please enter Confirm Password.'
-    } 
-    else if( (formData.password !== formData.confirmPassword) ) {
+    }
+    else if ((formData.password !== formData.confirmPassword)) {
         errors.confirmPassword = 'Password and Confirm Password does not match'
-    } 
+    }
 
 
-    if(!formData.otp){
+    if (!formData.otp) {
         errors.otp = ' OTP field should not be empty '
     }
 

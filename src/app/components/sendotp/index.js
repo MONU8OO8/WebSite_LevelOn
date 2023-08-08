@@ -10,12 +10,11 @@ import { ErrorCheck } from '../../utils/services'
 import { validateForm } from '../../utils/config'
 import { Typography } from '@mui/material'
 
-
 const VerifyOtp = () => {
     const [otp, setOtp] = useState('')
     const [error, setError] = useState({})
     const [buttonEnabled, setButtonEnabled] = useState(false)
-    const [timer, setTimer] = useState(30)
+    const [timer, setTimer] = useState(15)
 
     useEffect(() => {
         const countdown = setInterval(() => {
@@ -51,9 +50,9 @@ const VerifyOtp = () => {
         } else {
             setError({})
             setOtp('')
-            alert('success')
         }
-        setButtonEnabled(otp !== '')
+        alert('success')
+
     }
 
     const handleResend = () => {

@@ -11,11 +11,12 @@
     }
 }
 
-.disable{
+.disable {
     @include text(16px, $Metallic_silver, 400, normal, 19px, normal);
-    background-color:$Light_Crimson !important;
+    background-color: $Light_Crimson !important;
 }
-.enable{
+
+.enable {
     @include text(16px, $white, 400, normal, 19px, normal);
     background-color: $Amaranth !important
 }

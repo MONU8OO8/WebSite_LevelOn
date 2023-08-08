@@ -1,0 +1,64 @@
+@import '../../../stylesheets/variables.scss';
+@import '../../../stylesheets/mixins.scss';
+
+.seeker-info {
+    display: flex !important;
+    justify-content: space-between !important;
+
+    &__details {
+        &__name {
+            @include text($font_size_14 , $Raisin_black, 600, normal, normal, normal);
+            margin-bottom: 8px !important;
+        }
+
+        &__role {
+            @include text($font_size_12 , $Raisin_black, 400, normal, normal, normal);
+            margin-bottom: 8px !important;
+
+        }
+
+        &__address {
+            @include text($font_size_10 , $Css_grey, 400, normal, normal, normal);
+            margin-bottom: 8px !important;
+
+            &__contactinfo {
+                @include text($font_size_10 , $Amaranth, 400, normal, normal, normal);
+                margin-left: 8px !important;
+                text-decoration: none !important;
+            }
+
+        }
+
+        &__portfolio {
+            @include text($font_size_10 , $Amaranth, 400, normal, normal, normal);
+            margin-bottom: 8px !important;
+            text-decoration: none !important;
+            display: flex !important;
+            align-items: center !important;
+
+        }
+
+    }
+
+    &__exp {
+        &__data {
+            display: flex !important;
+            align-items: center !important;
+
+            &__img {
+                border-radius: 8px !important;
+                background: #D9D9D9 !important;
+                padding: 6px !important;
+                margin: 8px !important;
+            }
+
+            &__text {
+                @include text($font_size_12 , $Raisin_black, 400, normal, normal, normal);
+            }
+        }
+    }
+}
+
+.link-icon {
+    margin-left: 2px !important;
+}

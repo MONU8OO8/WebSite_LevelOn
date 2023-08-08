@@ -10,10 +10,10 @@
 .text-input {
     @include WidthHeight(100%, 60px);
     @include text($font_size_9 , $Raisin_black, 400, normal, 12px, normal);
-    
+
 }
 
-.eyeicon{
+.eyeicon {
     @include WidthHeight(19px, 19px);
 
 }
@@ -25,23 +25,23 @@
 }
 
 
-.MuiOutlinedInput-root .custom-adornment{
+.MuiOutlinedInput-root .custom-adornment {
     background-color: transparent !important;
 }
 
 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
     @include SetBorder($Metallic_silver);
-    height :auto !important ;
+    height: auto !important;
 }
 
 .MuiOutlinedInput-root .MuiOutlinedInput-input:not(:placeholder-shown) {
     background-color: white !important;
-  }
-  
+}
+
 
 .MuiOutlinedInput-root .MuiOutlinedInput-input::placeholder {
     @include text($font_size_9 , $Metallic_silver, 400, normal, 19px, normal);
-  }
+}
 
 .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
     @include SetBorder($Css_grey);
@@ -52,10 +52,10 @@
 }
 
 .MuiOutlinedInput-root.Mui-focused {
-    background-color: $white!important;
+    background-color: $white !important;
 }
 
-.MuiOutlinedInput-root.Mui-focused .custom-adornment{
+.MuiOutlinedInput-root.Mui-focused .custom-adornment {
     background-color: transparent !important;
 }
 
@@ -63,7 +63,7 @@
     @include SetBorder($Deep_carmine);
 }
 
-.MuiFormHelperText-root.Mui-error{
+.MuiFormHelperText-root.Mui-error {
     color: $Deep_carmine !important;
     position: relative !important;
     left: -15px !important;

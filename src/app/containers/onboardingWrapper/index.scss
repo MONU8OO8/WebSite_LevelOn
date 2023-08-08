@@ -2,31 +2,37 @@
 @import '../../../stylesheets/mixins.scss';
 
 .layout {
-    // @include flexCenter;
-    display: flex;
-    justify-content: center;
-    // margin-top: 20px;
-    width: 100%;
-    min-height: 100% !important;
-  
-    &__top {
-      @include WidthHeight(100%, 20%);
-      @include flexCenter;
-    }
-  
-    &__top__container {
+  // @include flexCenter;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100% !important;
+
+  &__top {
+    @include WidthHeight(100%, 20%);
+    @include flexCenter;
+
+    &__container {
       @include WidthHeight(66%, 100%);
       @include flexCenter;
+
+      &__logo {
+        @include WidthHeight(206px, 80px);
+      }
     }
-  
-    &__bottom {
-      @include WidthHeight(100%, 80%);
-      display: flex;
-      justify-content: center;
-    }
-  
-    &__bottom__container {
-      width: 100%;
-    }
+
   }
-  
+
+
+
+  &__bottom {
+    @include WidthHeight(100%, 80%);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__bottom__container {
+    width: 100%;
+  }
+
+}

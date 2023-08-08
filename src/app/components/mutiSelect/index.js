@@ -3,12 +3,8 @@ import './index.scss'
 import PropTypes from 'prop-types'
 import { Autocomplete, InputLabel } from '@mui/material'
 
-
-
 const MultiSelect = (props) => {
     const { label, name, type, placeholder, options, renderInput, eventHandler } = props
-
-
 
     return (
         <>
@@ -24,30 +20,7 @@ const MultiSelect = (props) => {
                 onChange={eventHandler}
                 multiple
                 filterSelectedOptions
-
             />
-
-
-
-
-            {/* <Autocomplete
-                multiple
-                // id="tags-outlined"
-                options={name}
-                // getOptionLabel={(option) => option.title}
-                defaultValue={[name[1]]}
-                filterSelectedOptions
-                renderInput={(params) => (
-                    <TextField
-                        {...params}
-                        // label="filterSelectedOptions"
-                        placeholder="Favorites"
-                    />
-                  
-                )}
-                onChange={eventHandler}  
-            /> */}
-
         </>
     )
 }
