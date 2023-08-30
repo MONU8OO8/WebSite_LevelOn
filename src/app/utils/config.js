@@ -29,9 +29,41 @@ export const validateEmail = (formData) => {
     } else if (!EmailValidation(formData.email)) {
         errors.email = 'Invalid Email Id'
     }
+    return errors
+}
+export const validateOtp = (formData) => {
+    const errors = {}
+
+    if (!formData.otp) {
+        errors.otp = 'OTP field should not be empty '
+    }
+    return errors
+}
+export const validatePassword = (formData) => {
+    const errors = {}
+
+    if (!formData.password) {
+        errors.password = 'Password is required'
+    } else if (!PasswordValidation(formData.password)) {
+        errors.password = 'Invalid Password format'
+    }
+    return errors
+}
+export const validateEmailPassword = (formData) => {
+    const errors = {}
+    if (!formData.email) {
+        errors.email = 'Email is required'
+    } else if (!EmailValidation(formData.email)) {
+        errors.email = 'Invalid Email Id'
+    }
+
+    if (!formData.password) {
+        errors.password = 'Password is required'
+    } else if (!PasswordValidation(formData.password)) {
+        errors.password = 'Invalid Password format'
+    }
 
     return errors
-
 }
 
 export const validateForm = (formData) => {

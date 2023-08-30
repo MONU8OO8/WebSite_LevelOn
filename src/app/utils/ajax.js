@@ -4,10 +4,12 @@ import { API_METHODS } from '../constants/api-constants';
 export const fetchCall = (callback, url, method, payload) =>
     new Promise(() => {
         let options = {};
-        // const token = sessionStorage.getItem('token');
+        const token = localStorage.getItem('token');
+        console.log(token);
+        
         const headers = {
             'Content-Type': 'application/json',
-            // 'Authorization': `Bearer ${token}`,
+            'Authorization': `Bearer ${token}`,
         };
 
         if (method === API_METHODS.GET) {
@@ -47,7 +49,7 @@ export const fetchCall = (callback, url, method, payload) =>
             });
     });
 
-    export const uploadFiles = (callback, url, method, formData) =>
+export const uploadFiles = (callback, url, method, formData) =>
     new Promise(() => {
         const ajax = new XMLHttpRequest();
 
